@@ -19,7 +19,19 @@ let app = new Vue({
     })
   },
 
+  mounted: function arrowFunc() {
+    document.addEventListener("keyup", this.Arrow);
+  },
+
   methods: {
+
+    Arrow () {
+      if (event.keyCode == 39) {
+        this.next();
+      } else if (event.keyCode == 37) {
+        this.prev();
+      };
+    },
 
     next(){
       this.counter++;
