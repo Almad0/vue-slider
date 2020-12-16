@@ -24,7 +24,7 @@
         </div>
         <div class="nav">
           <i class="fab fa-galactic-republic" :class="(index === counter) ? 'active' : '' "
-            v-for="(img, index) in images"></i>
+            v-for="(img, index) in images" @click="choose(index)"></i>
         </div>
       </div>
     </div>

@@ -13,10 +13,8 @@ let app = new Vue({
   ]
   },
 
-  mounted: function nextImg() {
-    this.$nextTick(function () {
-      setInterval(this.next, 2000);
-    })
+  created(){
+    setInterval(this.next, 2000);
   },
 
   mounted: function arrowFunc() {
@@ -45,9 +43,13 @@ let app = new Vue({
       if(this.counter < 0){
         this.counter = this.images.length-1;
       }
-    }
+    },
 
+    choose(index){
+    this.counter = index;
   }
+
+}
 
 });
 
